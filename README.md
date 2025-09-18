@@ -215,7 +215,7 @@ If you use this system in your research, please cite:
 
 ```bibtex
 @misc{rag_time_2025,
-  title={Time-Aware Embeddings for Log Trend Detection},
+  title={Solving Freshness in RAG: A Simple Recency Prior and the Limits of Heuristic Trend Detection},
   author={Matt Grofsky},
   year={2025},
   howpublished={\url{https://github.com/mattgrofsky/rag-time}},
