@@ -1,0 +1,39 @@
+# OS / editor
+.DS_Store
+data/.DS_Store
+logs/.DS_Store
+results/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.timeawarecyber/
+.venv
+env/
+venv/
+ENV/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Local config / logs
+config.yaml
+*.log
+
+# CERT Insider Threat data (licensed; download separately, never commit)
+logs/logon.csv
+data/events.parquet
+data/events_embedded.parquet
+results/assignments/

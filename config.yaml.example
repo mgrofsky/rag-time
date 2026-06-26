@@ -1,0 +1,28 @@
+# Example configuration for time-aware RAG pipeline
+# Copy to config.yaml and modify as needed
+
+model:
+  name: "all-MiniLM-L6-v2"
+  dimension: 384
+  dtype: "float16"  # or "float32" for higher precision
+  batch_size: 32
+
+clustering:
+  default_k: 6
+  auto_k: true  # Automatically determine optimal k using elbow method
+  k_min: 2
+  k_max: 10
+  cos_thresh: 0.5  # Cosine similarity threshold for cluster matching
+  drift_cos_drop: 0.2  # Threshold for cosine-based drift detection  
+  term_jaccard_drop: 0.60  # Threshold for term-based drift detection
+  emerge_min: 30  # Minimum size for growth trend classification
+  min_events_per_week: 5  # Minimum events required per week for clustering
+
+time_aware:
+  half_life_days: 14.0  # Time decay half-life in days
+  alpha: 0.7  # Balance between similarity (alpha) and recency (1-alpha)
+
+# Note: paths are automatically configured based on the project structure
+# but can be overridden here if needed:
+# paths:
+#   root: "/custom/path/to/project"
